@@ -1,5 +1,7 @@
 package br.com.fiap.codechella.domain.entities.usuario;
 
+import br.com.fiap.codechella.domain.Endereco;
+
 import java.time.LocalDate;
 
 public class Usuario {
@@ -7,6 +9,10 @@ public class Usuario {
     private String nome;
     private LocalDate nascimento;
     private String email;
+
+    private Endereco endereco;
+
+
 
     public Usuario(String cpf, String nome, LocalDate nascimento, String email) {
         validarCpf(cpf);
@@ -43,6 +49,13 @@ public class Usuario {
         }
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 
     public String getCpf() {
         return cpf;
